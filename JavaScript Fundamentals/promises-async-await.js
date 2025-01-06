@@ -27,3 +27,11 @@ const fetchUserDataAsync = async () => {
 }
 
 fetchUserDataAsync();
+
+// Promise.all
+// ❌ Bad: Sequential execution
+const data1 = await fetchFirst();
+const data2 = await fetchSecond();
+
+// ✅ Good: Parallel execution
+const [data3, data4] = await Promise.all([fetchFirst(), fetchSecond()]);
