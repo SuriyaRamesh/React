@@ -17,3 +17,14 @@ export const Footer = () => {
         </footer>
     )
 }
+
+// simple static card component
+export const card = () => {
+    return (
+        <div className="card">
+            <img src="https://picsum.photos/300/180" alt="Random" />
+            <h3>Card Titile</h3>
+            <p>This is a simple card component for pratice</p>
+        </div>
+    )
+}
