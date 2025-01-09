@@ -1,6 +1,5 @@
-// simple static header
-
-const Header = () => {
+// simple static header component
+export const Header = () => {
     return (
         <header>
             <h1>My Static React APP</h1>
@@ -8,4 +7,13 @@ const Header = () => {
         </header>
     )
 }
-export default Header;
+
+
+// simple static footer component
+export const Footer = () => {
+    return (
+        <footer>
+            <p>&copy; 2025 My Website. All Rights Reserved.</p>
+        </footer>
+    )
+}
