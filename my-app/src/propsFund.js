@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 // Accessing props in function component
 export function Greeting(props) {
     return <h1>Hello, {props.name}!</h1>;
@@ -6,6 +8,11 @@ export function Greeting(props) {
 // default props 
 Greeting.defaultProps = {
     name: 'Guest'
+}
+
+// Prop types
+Greeting.propTypes = {
+    name: PropTypes.string.isRequired
 }
 
 

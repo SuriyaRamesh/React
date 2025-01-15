@@ -11,7 +11,7 @@ function App() {
       <main>
         {/* Props */}
         <Greeting />  {/* default props apply here */}
-        <Greeting name="Suriya" />
+        <Greeting name={23} />
         <UserProfile user={user} />
         <Card/>
       </main>
