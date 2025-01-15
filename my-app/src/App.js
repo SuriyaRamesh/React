@@ -1,6 +1,8 @@
 import './App.css';
-import { Greeting } from './Greeting';
+import { Greeting, UserProfile } from './propsFund';
 import { Card, Footer, Header } from './StaticComps';
+
+const user = { name: "Ramya", age:29 }
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
         {/* Props */}
         <Greeting />  {/* default props apply here */}
         <Greeting name="Suriya" />
+        <UserProfile user={user} />
         <Card/>
       </main>
       <Footer/>

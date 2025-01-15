@@ -15,3 +15,13 @@ Greeting.defaultProps = {
 //         return <h1>Hello, {this.props.name}!</h1>;
 //     }
 // }
+
+
+export function UserProfile(props) {
+    return (
+        <div>
+            <h2>Name: {props.user.name}</h2>
+            <h2>Age: {props.user.age}</h2>
+        </div>
+    )
+}
