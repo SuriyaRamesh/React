@@ -8,7 +8,8 @@ function App() {
       <Header/>
       <main>
         {/* Props */}
-        <Greeting name={"Suriya"}></Greeting>
+        <Greeting />  {/* default props apply here */}
+        <Greeting name="Suriya" />
         <Card/>
       </main>
       <Footer/>
