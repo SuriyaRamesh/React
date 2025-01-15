@@ -1,4 +1,5 @@
 import './App.css';
+import { Greeting } from './Greeting';
 import { Card, Footer, Header } from './StaticComps';
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
     <div className="App">
       <Header/>
       <main>
-        <Card/>
+        {/* Props */}
+        <Greeting name={"Suriya"}></Greeting>
         <Card/>
       </main>
       <Footer/>
