@@ -32,3 +32,22 @@ export function UserProfile(props) {
         </div>
     )
 }
+
+export const UserList = ({ users }) => {
+  return (
+    <ul>
+      {users.map((user, index) => (
+        <li key={index}>{user.name} - {user.age} years old</li>
+      ))}
+    </ul>
+  );
+};
+
+UserList.propTypes = {
+  users: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      age: PropTypes.number.isRequired
+    })
+  ).isRequired
+};

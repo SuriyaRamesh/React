@@ -1,8 +1,15 @@
 import './App.css';
-import { Greeting, UserProfile } from './propsFund';
+import { Greeting, UserList, UserProfile } from './propsFund';
 import { Card, Footer, Header } from './StaticComps';
+import React from 'react';
 
-const user = { name: "Ramya", age:29 }
+const user = { name: "Ramya", age:29 };
+
+const usersData = [
+  { name: 2, age: 30 },   // number 2 is assinged to name prop
+  { name: "Bob", age: 25 },
+  { name: "Charlie", age: "Alice" }  // string "Alice" is assigned to age
+];
 
 function App() {
   return (
@@ -10,9 +17,11 @@ function App() {
       <Header/>
       <main>
         {/* Props */}
-        <Greeting />  {/* default props apply here */}
-        <Greeting name={23} />
+        <Greeting />
+        <Greeting name="Alice" />
+        {/* <Greeting name={30} /> */}
         <UserProfile user={user} />
+        <UserList users={usersData} />
         <Card/>
       </main>
       <Footer/>
