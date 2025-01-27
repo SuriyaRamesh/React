@@ -51,3 +51,13 @@ UserList.propTypes = {
     })
   ).isRequired
 };
+
+
+export function Card({ children }) {
+  console.log("children :", children);
+  return (
+    <div className="card">
+      {children[0]}
+    </div>
+  );
+}
