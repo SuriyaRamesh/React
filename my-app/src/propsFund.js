@@ -61,3 +61,7 @@ export function Card({ children }) {
     </div>
   );
 }
+
+export function Wrapper({ children }) {
+    return <div className="wrapper">{children}</div>;
+}

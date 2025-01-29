@@ -1,8 +1,9 @@
 import './App.css';
-import { Greeting, UserList, UserProfile, Card } from './propsFund';
+import { Greeting, UserList, UserProfile, Wrapper } from './propsFund';
 import { Footer, Header } from './StaticComps';
 import React from 'react';
 import { Dropdown, DropdownContent, DropdownOption, DropdownTrigger } from './dropdown';
+import { Modal, Button, Card } from './childrenProps';
 
 const user = { name: "Ramya", age:29 };
 
@@ -17,6 +18,22 @@ function App() {
     <div className="App">
       <Header/>
       <main>
+
+        <Modal onClose={() => alert('Modal closed!')}>
+            <h2>Modal Title</h2>
+            <p>This is the modal body content.</p>
+        </Modal>
+
+        <div>
+            <Button onClick={() => alert('Button clicked!')}>Click Me</Button>
+            <Button onClick={() => alert('Another button clicked!')}>
+                <span role="img" aria-label="star">⭐</span> Star
+            </Button>
+        </div>
+
+        <Card showContent={true}>
+          <h2>This is card titile</h2>
+        </Card>
 
         <Dropdown>
           <DropdownTrigger>Options</DropdownTrigger>
@@ -37,6 +54,10 @@ function App() {
           <h2>Title</h2>
           <p>Content goes here</p>
         </Card> */}
+        <Wrapper>
+            <h1>Hello, World!</h1>
+            <p>This is a simple example of children props.</p>
+        </Wrapper>
       </main>
       <Footer/>
     </div>
