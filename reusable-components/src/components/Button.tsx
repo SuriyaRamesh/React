@@ -15,9 +15,9 @@ const Button: React.FC<ButtonProps> = ({variant = 'primary', size = 'medium', on
             'bg-blue-600 text-white': variant === 'primary',
             'bg-gray-300 text-black': variant === 'secondary',
             'bg-red-600 text-white': variant === 'danger',
-            'text-sm': size === 'small',
+            'text-sm px-2': size === 'small',
             'text-base': size === 'medium',
-            'text-lg': size === 'large',
+            'text-lg px-5': size === 'large',
         }
     )
 
